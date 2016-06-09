@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.knime.core.DataCellToJavaConverter">
+      <DataCellToJavaConverter
+            factoryClass="org.knime.knip.dl4j.data.convert.ImgPlusValueToINDArrayConverterFactory"></DataCellToJavaConverter>
+   </extension>
+   <extension
+         point="org.knime.workbench.repository.nodes">
+      <node
+            deprecated="false"
+            factory-class="org.knime.knip.dl4j.node.data.mnist.MnistFetcherNodeFactory"
+            id="org.knime.knip.dl4j.node.data.mnist.MnistFetcherNodeFactory">
+      </node>
+   </extension>
+
+</plugin>
