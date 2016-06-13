@@ -21,7 +21,7 @@ import org.knime.core.node.defaultnodesettings.SettingsModelBoolean;
 import org.knime.core.node.defaultnodesettings.SettingsModelIntegerBounded;
 import org.knime.core.node.defaultnodesettings.SettingsModelString;
 import org.knime.core.node.port.PortType;
-import org.knime.dl.base.AbstractDLNodeModel;
+import org.knime.ext.dl4j.base.AbstractDLNodeModel;
 import org.knime.knip.base.data.img.ImgPlusCell;
 import org.knime.knip.base.data.img.ImgPlusCellFactory;
 import org.nd4j.linalg.api.ndarray.INDArray;
