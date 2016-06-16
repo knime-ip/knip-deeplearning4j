@@ -32,7 +32,8 @@ public class MnistFetcherNodeDialog extends DefaultNodeSettingsPane {
 				));
     	addDialogComponent(new DialogComponentNumberEdit(
 				MnistFetcherNodeModel.createNumberOfImagesModel(),
-				"Number of Images to Fetch"					
+				"Number of Images to Fetch",
+				5
 				));
     }
 }
