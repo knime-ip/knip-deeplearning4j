@@ -26,7 +26,7 @@ public class MnistFetcherNodeFactory
      */
     @Override
     public int getNrNodeViews() {
-        return 1;
+        return 0;
     }
 
     /**
@@ -35,7 +35,7 @@ public class MnistFetcherNodeFactory
     @Override
     public NodeView<MnistFetcherNodeModel> createNodeView(final int viewIndex,
             final MnistFetcherNodeModel nodeModel) {
-        return new MnistFetcherNodeView(nodeModel);
+        return null;
     }
 
     /**
