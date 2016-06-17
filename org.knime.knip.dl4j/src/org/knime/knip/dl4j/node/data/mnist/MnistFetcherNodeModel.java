@@ -155,7 +155,7 @@ public class MnistFetcherNodeModel extends AbstractDLNodeModel {
 	 * @param fac the factory to use for image creation
 	 * @return the image containing the pixel values from the array
 	 */
-	private Img<FloatType> createImgFromINDArray(INDArray flattenedImage, ArrayImgFactory<FloatType> fac){
+	private Img<FloatType> createImgFromINDArray(final INDArray flattenedImage, final ArrayImgFactory<FloatType> fac){
 		Img<FloatType> img = fac.create(new long[]{28,28}, new FloatType());
 		RandomAccess<FloatType> imgAccess = img.randomAccess();
 		Cursor<FloatType> imgCursor = img.localizingCursor();
@@ -179,7 +179,7 @@ public class MnistFetcherNodeModel extends AbstractDLNodeModel {
 	 * @param labelVector the MNIST one-hot label vector
 	 * @return corresponding label
 	 */
-	private String createLabelFromINDArray(INDArray labelVector){
+	private String createLabelFromINDArray(final INDArray labelVector){
 		float label = 0;
 		for(int i = 0; i < labelVector.length(); i++){
 			if(labelVector.getFloat(i) == 1.0){
