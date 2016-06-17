@@ -14,7 +14,7 @@ import org.knime.core.node.defaultnodesettings.DialogComponentStringSelection;
  * complex dialog please derive directly from 
  * {@link org.knime.core.node.NodeDialogPane}.
  * 
- * @author KNIME
+ * @author David Kolb, KNIME.com GmbH
  */
 public class MnistFetcherNodeDialog extends DefaultNodeSettingsPane {
 

@@ -35,10 +35,10 @@ import net.imglib2.img.array.ArrayImgFactory;
 import net.imglib2.type.numeric.real.FloatType;
 
 /**
- * This is the model implementation of MnistFetcher.
- * 
+ * Node which downloads images from the MNIST dataset and supplies them at the output table.
+ * Images are fetched using DL4J {@link MnistDataSetIterator}.
  *
- * @author KNIME
+ * @author David Kolb, KNIME.com GmbH
  */
 public class MnistFetcherNodeModel extends AbstractDLNodeModel {
 
@@ -49,8 +49,6 @@ public class MnistFetcherNodeModel extends AbstractDLNodeModel {
     private SettingsModelString m_testOrTrain;
     private SettingsModelBoolean m_doBinarize;
     private SettingsModelIntegerBounded m_numberOfImages;   
-    
-    
     
 	/**
      * Constructor for the node model.
@@ -137,8 +135,6 @@ public class MnistFetcherNodeModel extends AbstractDLNodeModel {
 		return new SettingsModelIntegerBounded("number_of_images_to_fetch", 1, 1, 60000);
 	}
 	
-	
-	
 	private DataTableSpec createOutputSpec(){
 		DataColumnSpec[] colSpecs = new DataColumnSpec[2];
 		
@@ -151,7 +147,15 @@ public class MnistFetcherNodeModel extends AbstractDLNodeModel {
     	return new DataTableSpec(colSpecs);
 	}
     
-	private Img<FloatType> createImgFromINDArray(INDArray imageVector, ArrayImgFactory<FloatType> fac){
+	/**
+	 * Creates a {@link Img} from a {@link INDArray}. 28 by 28 images are expected and that 
+	 * the array contains the flattened image.
+	 * 
+	 * @param flattenedImage the array containing the image pixel values
+	 * @param fac the factory to use for image creation
+	 * @return the image containing the pixel values from the array
+	 */
+	private Img<FloatType> createImgFromINDArray(INDArray flattenedImage, ArrayImgFactory<FloatType> fac){
 		Img<FloatType> img = fac.create(new long[]{28,28}, new FloatType());
 		RandomAccess<FloatType> imgAccess = img.randomAccess();
 		Cursor<FloatType> imgCursor = img.localizingCursor();
@@ -161,17 +165,25 @@ public class MnistFetcherNodeModel extends AbstractDLNodeModel {
 		while(imgCursor.hasNext()){
 			imgCursor.fwd();
 			imgAccess.setPosition(imgCursor);   			
-			imgAccess.get().set(imageVector.getFloat(k));
+			imgAccess.get().set(flattenedImage.getFloat(k));
 			k++;
 		}
 		
 		return img;
 	}
 	
+	/**
+	 * Converts from MNIST one-hot label vector, hence a vector of length 10 with one position with value 1.0 marking
+	 * the number label of the corresponding MNIST image, to label.
+	 * 
+	 * @param labelVector the MNIST one-hot label vector
+	 * @return corresponding label
+	 */
 	private String createLabelFromINDArray(INDArray labelVector){
 		float label = 0;
 		for(int i = 0; i < labelVector.length(); i++){
 			if(labelVector.getFloat(i) == 1.0){
+				//index corresponds directly to the MNIST label
 				label = i;
 				break;
 			}

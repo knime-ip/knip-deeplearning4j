@@ -11,8 +11,22 @@ import org.nd4j.linalg.factory.Nd4j;
 import net.imglib2.img.Img;
 import net.imglib2.type.numeric.RealType;
 
+/**
+ * Implementation of {@link DataCellToJavaConverterFactory} creating a converter from
+ * ImgPlusValue to INDArray.
+ * 
+ * @author David Kolb, KNIME.com GmbH
+ */
 public class ImgPlusValueToINDArrayConverterFactory implements DataCellToJavaConverterFactory<ImgPlusValue, INDArray> {
 
+	/**
+	 * Implementation of {@link DataCellToJavaConverter} which converts from ImgPlusValue to
+	 * INDArray. Images are converted by iterating the image and copying each pixel, hence images
+	 * will be just flattened.
+	 *
+	 * @author David Kolb, KNIME.com GmbH
+	 * @param <T>
+	 */
 	private class ImgPlusValueToINDArrayConverter<T extends RealType<T>> implements DataCellToJavaConverter<ImgPlusValue<T>, INDArray>{
 		@Override
 		public INDArray convert(ImgPlusValue<T> source) throws Exception {
