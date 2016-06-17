@@ -4,10 +4,11 @@ Bundle-Name: KNIME Deeplearning4J Integration Imageprocessing
 Bundle-SymbolicName: org.knime.knip.dl4j;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Require-Bundle: org.knime.base;bundle-version="3.2.0",
- org.knime.knip.base;bundle-version="1.4.2",
- org.knime.ext.dl4j.base;bundle-version="1.0.0",
+Require-Bundle: org.knime.knip.base;bundle-version="1.4.2",
  imglib2;bundle-version="2.7.0",
  imagej-common;bundle-version="0.20.1",
- org.knime.workbench.repository;bundle-version="3.2.0"
+ org.knime.workbench.repository;bundle-version="3.2.0",
+ org.knime.ext.dl4j.libs;bundle-version="3.2.0",
+ org.knime.core;bundle-version="3.2.0",
+ org.knime.ext.dl4j.base;bundle-version="3.2.0"
 Bundle-Vendor: KNIME GmbH, Konstanz, Germany
