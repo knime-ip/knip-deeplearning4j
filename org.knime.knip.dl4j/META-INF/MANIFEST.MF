@@ -8,7 +8,7 @@ Require-Bundle: org.knime.knip.base;bundle-version="1.4.2",
  imglib2;bundle-version="2.7.0",
  imagej-common;bundle-version="0.20.1",
  org.knime.workbench.repository;bundle-version="3.2.0",
- org.knime.ext.dl4j.libs;bundle-version="3.2.0",
  org.knime.core;bundle-version="3.2.0",
- org.knime.ext.dl4j.base;bundle-version="3.2.0"
+ org.knime.ext.dl4j.base;bundle-version="3.2.0",
+ org.knime.ext.dl4j.libs;bundle-version="0.4.310"
 Bundle-Vendor: KNIME GmbH, Konstanz, Germany
