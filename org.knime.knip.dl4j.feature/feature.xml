@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="org.knime.knip.dl4j.feature"
-      label="KNIME Deeplearning4J Integration Imageprocessing"
+      label="KNIME Image Processing - Deeplearning4J Integration"
       version="1.0.0.qualifier"
-      provider-name="KNIME GmbH, Konstanz, Germany">
+      provider-name="University of Konstanz, Germany">
 
    <description>
       KNIME Deeplearning4J Integration Imageprocessing.
