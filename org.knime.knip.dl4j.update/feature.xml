@@ -9,4 +9,8 @@
          id="org.knime.knip.dl4j.feature"
          version="0.0.0"/>
 
+   <includes
+         id="org.knime.knip.dl4j.testing.feature"
+         version="0.0.0"/>
+
 </feature>
