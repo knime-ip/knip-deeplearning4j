@@ -3,6 +3,9 @@ KNIME Image Processing - Deeplearning4J Integration
 ### About
 Additional nodes and functionality for the KNIME Deeplearning4J Integration in the context of Image Processing. Currently this plugin contains a converter form images into a DL4J compatible format as well as nodes to fetch popular image datasets from the internet and provide them in KNIME.
 
+### Example
+![Image](https://abload.de/img/knip_dl4j6lsiv.png)
+
 ### Licence
 KNIME Image Processing - Deeplearning4J Integration is avaiable under the same [Licence](https://www.knime.org/downloads/full-license) as KNIME.
 
