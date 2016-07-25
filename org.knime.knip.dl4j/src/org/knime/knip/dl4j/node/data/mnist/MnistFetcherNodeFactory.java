@@ -51,6 +51,7 @@ import org.knime.core.node.NodeView;
  * 
  *
  * @author KNIME
+ * @deprecated
  */
 public class MnistFetcherNodeFactory 
         extends NodeFactory<MnistFetcherNodeModel> {

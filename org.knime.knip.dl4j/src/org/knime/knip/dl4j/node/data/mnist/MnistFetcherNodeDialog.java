@@ -57,6 +57,7 @@ import org.knime.core.node.defaultnodesettings.DialogComponentStringSelection;
  * {@link org.knime.core.node.NodeDialogPane}.
  * 
  * @author David Kolb, KNIME.com GmbH
+ * @deprecated
  */
 public class MnistFetcherNodeDialog extends DefaultNodeSettingsPane {
 

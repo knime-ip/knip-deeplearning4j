@@ -81,6 +81,7 @@ import net.imglib2.type.numeric.real.FloatType;
  * Images are fetched using DL4J {@link MnistDataSetIterator}.
  *
  * @author David Kolb, KNIME.com GmbH
+ * @deprecated
  */
 public class MnistFetcherNodeModel extends AbstractDLNodeModel {
 

@@ -7,15 +7,6 @@
             factoryClass="org.knime.knip.dl4j.data.convert.ImgPlusValueToINDArrayConverterFactory"></DataCellToJavaConverter>
    </extension>
    <extension
-         point="org.knime.workbench.repository.nodes">
-      <node
-            category-path="/labs/deeplearning/data"
-            deprecated="false"
-            factory-class="org.knime.knip.dl4j.node.data.mnist.MnistFetcherNodeFactory"
-            id="org.knime.knip.dl4j.node.data.mnist.MnistFetcherNodeFactory">
-      </node>
-   </extension>
-   <extension
          point="org.knime.workbench.repository.categories">
       <category
             icon="res/icons/missing.gif"
