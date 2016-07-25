@@ -2,11 +2,11 @@
 <feature
       id="org.knime.knip.dl4j.testing.feature"
       label="KNIME Image Processing - Deeplearning4J Integration Testing"
-      version="1.0.0.qualifier"
+      version="1.0.1.qualifier"
       provider-name="University of Konstanz, Germany">
 
    <description>
-KNIME Image Processing - Deeplearning4J Integration.
+      KNIME Image Processing - Deeplearning4J Integration.
 Contains additional nodes used in the context 
 of image processing.
    </description>
@@ -16,7 +16,7 @@ of image processing.
    </copyright>
 
    <license>
- GNU GENERAL PUBLIC LICENSE with Additional Permissions according to Sec. 7
+      GNU GENERAL PUBLIC LICENSE with Additional Permissions according to Sec. 7
 *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** 
 Please see below the General Public License (GPL), Version 3, 
 and the Additional Permissions according to Sec. 7 
@@ -727,7 +727,7 @@ Nodes, in each case even if such Nodes are propagated with or for
 interoperation with KNIME.  The owner of a Node may freely choose the
 license terms applicable to such Node, including when such Node is
 propagated with or for interoperation with KNIME.
-</license>
+   </license>
 
    <plugin
          id="org.knime.ext.dl4j.testing"
