@@ -730,8 +730,7 @@ propagated with or for interoperation with KNIME.
    </license>
 
    <requires>
-         <import feature="org.knime.features.ext.dl4j"
-         version="3.2.0" match="greaterOrEqual"/>
+      <import feature="org.knime.features.ext.dl4j" version="3.2.0" match="greaterOrEqual"/>
    </requires>
 
    <plugin
