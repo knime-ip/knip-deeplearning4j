@@ -5,6 +5,9 @@
          point="org.knime.core.DataCellToJavaConverter">
       <DataCellToJavaConverter
             factoryClass="org.knime.knip.dl4j.data.convert.ImgPlusValueToINDArrayConverterFactory"></DataCellToJavaConverter>
+      <DataCellToJavaConverter
+            factoryClass="org.knime.knip.dl4j.data.convert.ImgPlusValueToDoubleArrayConverterFactory">
+      </DataCellToJavaConverter>
    </extension>
    <extension
          point="org.knime.workbench.repository.categories">
