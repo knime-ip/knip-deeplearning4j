@@ -12,3 +12,4 @@ Require-Bundle: org.knime.knip.base;bundle-version="[1.5.0,2.0.0)",
  org.knime.ext.dl4j.base;bundle-version="3.2.0",
  org.knime.ext.dl4j.libs;bundle-version="0.4.310"
 Bundle-Vendor: University of Konstanz, Germany
+Eclipse-PlatformFilter: (osgi.arch=x86_64)
