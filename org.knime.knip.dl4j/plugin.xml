@@ -19,5 +19,11 @@
             path="/labs/deeplearning/">
       </category>
    </extension>
+   <extension
+         point="org.knime.ext.dl4j.base.DL4JConverter">
+      <DL4JConverter
+            converterClass="org.knime.knip.dl4j.data.convert.ImgPlusValueToDoubleArrayConverter">
+      </DL4JConverter>
+   </extension>
 
 </plugin>
