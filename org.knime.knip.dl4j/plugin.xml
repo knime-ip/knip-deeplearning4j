@@ -2,24 +2,6 @@
 <?eclipse version="3.4"?>
 <plugin>
    <extension
-         point="org.knime.core.DataCellToJavaConverter">
-      <DataCellToJavaConverter
-            factoryClass="org.knime.knip.dl4j.data.convert.ImgPlusValueToINDArrayConverterFactory"></DataCellToJavaConverter>
-      <DataCellToJavaConverter
-            factoryClass="org.knime.knip.dl4j.data.convert.ImgPlusValueToDoubleArrayConverterFactory">
-      </DataCellToJavaConverter>
-   </extension>
-   <extension
-         point="org.knime.workbench.repository.categories">
-      <category
-            icon="res/icons/missing.gif"
-            level-id="data"
-            locked="true"
-            name="Data"
-            path="/labs/deeplearning/">
-      </category>
-   </extension>
-   <extension
          point="org.knime.ext.dl4j.base.DL4JConverter">
       <DL4JConverter
             converterClass="org.knime.knip.dl4j.data.convert.ImgPlusValueToDoubleArrayConverter">
