@@ -2,7 +2,7 @@
 <feature
       id="org.knime.knip.dl4j.testing.feature"
       label="KNIME Image Processing - Deeplearning4J Integration Testing"
-      version="1.1.0.qualifier"
+      version="1.1.1.qualifier"
       provider-name="University of Konstanz, Germany">
 
    <description>
