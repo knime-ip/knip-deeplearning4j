@@ -8,20 +8,23 @@ import net.imglib2.RandomAccess;
 import net.imglib2.img.Img;
 import net.imglib2.img.array.ArrayImg;
 import net.imglib2.img.array.ArrayImgs;
-import net.imglib2.img.basictypeaccess.array.FloatArray;
+import net.imglib2.img.basictypeaccess.array.DoubleArray;
 import net.imglib2.type.numeric.RealType;
-import net.imglib2.type.numeric.real.FloatType;
+import net.imglib2.type.numeric.real.DoubleType;
 
 /**
- * * DL4JConverter that converts a ImgPlusValue to double[]. * * @author David
- * Kolb, KNIME.com GmbH * * @param
+ * DL4JConverter that converts a ImgPlusValue to float[]. *
+ * 
+ * @author David Kolb, KNIME.com GmbH
+ * 
+ * @param
  */
 @SuppressWarnings("rawtypes")
 public class ImgPlusValueToDoubleArrayConverter2<T extends RealType<T>>
-		extends BaseDL4JConverter<ImgPlusValue, float[]> {
+		extends BaseDL4JConverter<ImgPlusValue, double[]> {
 	/** * Constructor for class ImgPlusValueToDoubleArrayConverter. */
 	public ImgPlusValueToDoubleArrayConverter2() {
-		super(ImgPlusValue.class, float[].class, BaseDL4JConverter.DEFAULT_PRIORITY);
+		super(ImgPlusValue.class, double[].class, BaseDL4JConverter.DEFAULT_PRIORITY);
 	}
 
 	/**
@@ -30,7 +33,7 @@ public class ImgPlusValueToDoubleArrayConverter2<T extends RealType<T>>
 	 */
 	@Override
 	@SuppressWarnings("unchecked")
-	public float[] convert(ImgPlusValue sourceImg) throws Exception {
+	public double[] convert(ImgPlusValue sourceImg) throws Exception {
 
 		long[] dims = sourceImg.getDimensions();
 
@@ -49,8 +52,8 @@ public class ImgPlusValueToDoubleArrayConverter2<T extends RealType<T>>
 		final Img img = sourceImg.getImgPlus();
 		final RandomAccess<T> source = (RandomAccess<T>) img.randomAccess();
 
-		final ArrayImg<FloatType, FloatArray> dest = ArrayImgs.floats(reshapedDims);
-		final Cursor<FloatType> destCursor = dest.cursor();
+		final ArrayImg<DoubleType, DoubleArray> dest = ArrayImgs.doubles(reshapedDims);
+		final Cursor<DoubleType> destCursor = dest.cursor();
 		for (int channel = 0; channel < dims[2]; channel++) {
 			source.setPosition(channel, 2);
 			for (int y = 0; y < dims[1]; y++) {
