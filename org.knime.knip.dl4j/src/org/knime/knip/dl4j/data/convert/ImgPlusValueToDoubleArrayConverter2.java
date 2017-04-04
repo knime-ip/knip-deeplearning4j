@@ -24,7 +24,7 @@ public class ImgPlusValueToDoubleArrayConverter2<T extends RealType<T>>
 		extends BaseDL4JConverter<ImgPlusValue, double[]> {
 	/** * Constructor for class ImgPlusValueToDoubleArrayConverter. */
 	public ImgPlusValueToDoubleArrayConverter2() {
-		super(ImgPlusValue.class, double[].class, BaseDL4JConverter.DEFAULT_PRIORITY);
+		super(ImgPlusValue.class, double[].class, BaseDL4JConverter.DEFAULT_PRIORITY + 1);
 	}
 
 	/**
