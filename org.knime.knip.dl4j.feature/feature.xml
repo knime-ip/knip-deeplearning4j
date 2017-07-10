@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="org.knime.knip.dl4j.feature"
-      label="KNIME Image Processing - Deeplearning4J Integration"
+      label="KNIME Image Processing - Deeplearning4J Integration (64bit only)"
       version="1.1.1.qualifier"
       provider-name="University of Konstanz, Germany">
 
@@ -735,6 +735,7 @@ propagated with or for interoperation with KNIME.
 
    <plugin
          id="org.knime.knip.dl4j"
+         arch="x86_64"
          download-size="0"
          install-size="0"
          version="0.0.0"
