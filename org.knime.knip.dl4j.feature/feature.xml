@@ -2,7 +2,7 @@
 <feature
       id="org.knime.knip.dl4j.feature"
       label="KNIME Image Processing - Deeplearning4J Integration (64bit only)"
-      version="1.1.1.qualifier"
+      version="1.1.2.qualifier"
       provider-name="University of Konstanz, Germany">
 
    <description>
