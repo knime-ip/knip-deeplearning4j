@@ -10,5 +10,4 @@ Additional nodes and functionality for the [KNIME Deeplearning4J Integration - I
 KNIME Image Processing - Deeplearning4J Integration is avaiable under the same [License](https://www.knime.org/downloads/full-license) as KNIME.
 
 ### Contact
-- [David Kolb](mailto:david.kolb@uni-konstanz.de)
-- [Christian Dietz](mailto:christian.dietz@uni-konstanz.de)
+You can contact us in the [KNIME Community forum](https://www.knime.com/forum/knime-image-processing).
