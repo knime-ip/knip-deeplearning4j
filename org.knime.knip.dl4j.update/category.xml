@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature id="org.knime.knip.dl4j.feature" version="0.0.0">
+       <category name="knip-dl4j" />
+   </feature>
+   <feature id="org.knime.knip.dl4j.testing.feature" version="0.0.0">
+       <category name="knip-dl4j" />
+   </feature>
+
+
+   <category-def name="knip-dl4j" label="Build artifacts from knip-dl4j">
+       <description>Build artifacts from knip-dl4j </description>
+   </category-def>
+</site>
